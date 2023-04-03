@@ -1,0 +1,26 @@
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+    background-color: black;
+}
+
+.clock div{
+    font-size: 10em;
+    color: white;
+    margin: 0 20px;
+}
+
+.h{
+    text-shadow: 0 0 10px red;
+}
+
+.m{
+    text-shadow: 0 0 10px yellow;
+}
+
+.s{
+    text-shadow: 0 0 10px green;
+}
