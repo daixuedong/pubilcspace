@@ -23,16 +23,16 @@ def get_movies():
             response=requests.get(link,headers=headers,proxies=proxies,timeout=10)
             if response.status_code != 200:
                 print(str(i+1),'请求失败')
-                return None
+                continue
             soup=BeautifulSoup(response.text,"lxml")
             div_list = soup.find_all('div',class_='hd')
             if not div_list:
                 print(str(i+1),'返回结果为空')
-                return None
+                continue
             for each in div_list:
                 movie = each.a.span.text.strip()
                 movie_list.append(movie)
         except Exception as e:
             print(str(i+1),'请求或解析失败')
-            return None
+            continue
     return movie_list
