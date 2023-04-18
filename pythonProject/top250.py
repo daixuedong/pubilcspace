@@ -20,4 +20,4 @@ def get_movies():
     return movie_list
 
 movies= get_movies()
-print(movies)
+print(movies,end=' ')
